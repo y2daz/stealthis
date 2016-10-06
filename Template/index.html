@@ -13,11 +13,23 @@
 </head>
 <body>
 <div data-role="page" data-theme="b">
+
+    <!--
+        ANY STUFF TO PUT IN THE HEADER
+    -->
     <div data-role="header">
-        <!--<h1>Wild</h1>-->
     </div>
 
+    <!--
+        ALL THE MAIN STUFF GOES HERE
+    -->
     <div data-role="main" class="ui-content">
+
+
+
+        <!--
+            NAVIGATION
+        -->
         <div align="right">
             <fieldset data-role="controlgroup" data-type="horizontal" data-mini="false" >
                 <a data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-active" >Home</a>
@@ -26,39 +38,50 @@
             </fieldset>
         </div>
 
+
+
+        <!--
+            BIG IMAGE WHOLE
+        -->
         <div style="width:100%;;">
             <a href="#"><img style="width:100%; opacity: 1.0;" src="img/main.jpg" /></a>
         </div>
 
+
+
+        <!--
+            TITLE AND A CAPTION
+        -->
         <div>
             <h2>Wild</h2>
             <p>The only place for your clothes</p>
         </div>
 
-        <a href="#" data-role="button" data-iconpos="right" data-icon="carat-r" >Shop Now!</a>
+
+
+        <!--
+            BIG LONG BUTTONS.
+        -->
+        <a href="#" data-role="button" data-iconpos="right" data-icon="carat-r" >Click me!</a>
+        <a href="#" data-role="button" data-icon="star">Star button</a>
+
+
+        <!--
+        PUT OTHER POSSIBLE ICONS IN OTHER POSITION
+        -->
 
 
 
-
-
+        <!--
+            COLLAPSIBLE AREA
+        -->
         <div data-role="collapsible" data-iconpos="right">
-            <h3>1st September 2015</h3>
-
+            <h3>Put a title here</h3>
             <table>
                 <tr>
                     <th>Item</th>
                     <th>Quanity</th>
                     <th>Price</th>
-                </tr>
-                <tr>
-                    <td>Shoes</td>
-                    <td>2</td>
-                    <td>1800.00</td>
-                </tr>
-                <tr>
-                    <td>Tie</td>
-                    <td>1</td>
-                    <td>1800.00</td>
                 </tr>
                 <tr>
                     <td>Shirt</td>
@@ -76,8 +99,9 @@
 
 
 
-
-
+        <!--
+            SEARCHABLE LIST
+        -->
         <ul data-role="listview" data-inset="true" data-filter="true">
             <li><a href="#">Acura</a> </li>
             <li><a href="#">Audi</a> </li>
@@ -86,17 +110,23 @@
             <li><a href="#">Ferrari</a> </li>
         </ul>
 
+
+        <!--
+            SLIDER
+            MIN AND MAX IS GIVEN
+        -->
         <form>
             <label for="slider-0">Input slider:</label>
             <input type="range" name="slider" id="slider-0" value="25" min="0" max="100" />
         </form>
-        <a href="#" data-role="button" data-icon="star">Star button</a>
 
 
 
 
+        <!--
+            GRID OF IMAGES
+        -->
         <div class="ui-grid-b" style="padding: 2%;" align="middle">
-
             <div class="ui-block-a" style="height:100%">
                 <a href="#">  <img style="width:95%; height:95%" src="img/1.jpg" is="image" align="middle">
                 </a>
@@ -110,7 +140,6 @@
                 <p></p>
             </div>
 
-
             <div class="ui-block-a" style="height:100%">
                 <img style="max-width:95%; min-width:95%" src="img/10.jpg" is="image" align="middle">
             </div>
@@ -119,28 +148,9 @@
             </div>
         </div>
 
-
-
-        <div style="width:100%;;">
-            <a href="#"><img style="width:100%; opacity: 1.0;" src="img/1.jpg" /></a>
-        </div>
-
-        <div>
-            <h2>Neiman Marcus Coat</h2>
-            <p>An amazing coat to go with some ordinary pair of jeans that'll make you rethink your life.</p>
-        </div>
-
-
-
-        <div data-role="collapsible" data-iconpos="right">
-            <h3>Add to Cart</h3>
-            <label>Quantity</label>
-            <input type="number" min="1" max="3"/>
-            <a href="" data-role="button" data-iconpos="right" data-icon="plus" >Add to Cart!</a>
-
-        </div>
-
-
+        <!--
+            FORM
+        -->
         <form>
             <label for="text-name">Name:
                 <input type="text" name="name" id="text-name" value="Yazdaan"/>
@@ -151,6 +161,7 @@
             <label for="text-name">Email:
                 <input type="text" name="email" id="text-email" value="me@myemail.com"/>
             </label>
+
             <div data-role="collapsible" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
                 <h3>Change password</h3>
                 <label>Old password</label>
@@ -162,11 +173,21 @@
                 <input type="button" value="Confirm" />
 
             </div>
-            <!--<input type="button" name="slider" id="slider-0" value="25" min="0" max="100" />-->
+
+            <div data-role="collapsible" data-iconpos="right">
+                <h3>Add to Cart</h3>
+                <label>Quantity
+                    <input type="number" min="1" max="3"/>
+                </label>
+                <a href="" data-role="button" data-iconpos="right" data-icon="plus" >Add to Cart!</a>
+            </div>
         </form>
 
 
-
+        <!--
+            FOOTER STUFF GOES HERE.
+            HAS SOCIAL MEDIA BUTTONS
+        -->
         <div data-role="footer" align="right">
             <div class="ui-grid-b" style="padding: 2%;" align="middle">
                 <div class="ui-block-a" style="height:100%">
