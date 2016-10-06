@@ -1,4 +1,11 @@
 CSS code to add a theme
 
+A bunch of themes
+remove current crap ones maybe
+
 put everything in one template file.
 delete and create crap
+
+fix sizing issues
+
+make blank more generic

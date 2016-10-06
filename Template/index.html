@@ -9,17 +9,7 @@
     <script src="jquery.mobile-1.4.5/jquery-1.11.3.js"> </script>
     <!-- Include the jQuery Mobile library -->
     <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"> </script>
-    <script>
-        $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
-            if (applicationCache &&
-                    applicationCache.status != applicationCache.UNCACHED &&
-                    applicationCache.status != applicationCache.OBSOLETE
-                    ) {
-                options.isLocal = true;
-            }
-        });
 
-    </script>
 </head>
 <body>
 <div data-role="page" data-theme="b">
@@ -31,8 +21,8 @@
         <div align="right">
             <fieldset data-role="controlgroup" data-type="horizontal" data-mini="false" >
                 <a data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-active" >Home</a>
-                <a href="./profile.html" data-role="button" data-icon="user" data-iconpos="notext">Profile</a>
-                <a href="./cart.html" data-role="button" data-icon="shop" data-iconpos="notext">Cart</a>
+                <a href="#" data-role="button" data-icon="user" data-iconpos="notext">Profile</a>
+                <a href="#" data-role="button" data-icon="shop" data-iconpos="notext">Cart</a>
             </fieldset>
         </div>
 
@@ -45,24 +35,153 @@
             <p>The only place for your clothes</p>
         </div>
 
-        <a href="gallery.html" data-role="button" data-iconpos="right" data-icon="carat-r" >Shop Now!</a>
-    </div>
+        <a href="#" data-role="button" data-iconpos="right" data-icon="carat-r" >Shop Now!</a>
 
-    <div data-role="footer" align="right">
+
+
+
+
+        <div data-role="collapsible" data-iconpos="right">
+            <h3>1st September 2015</h3>
+
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Quanity</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Shoes</td>
+                    <td>2</td>
+                    <td>1800.00</td>
+                </tr>
+                <tr>
+                    <td>Tie</td>
+                    <td>1</td>
+                    <td>1800.00</td>
+                </tr>
+                <tr>
+                    <td>Shirt</td>
+                    <td>1</td>
+                    <td>1750.00</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>Total</td>
+                    <td>5350.00</td>
+                </tr>
+            </table>
+        </div>
+
+
+
+
+
+
+        <ul data-role="listview" data-inset="true" data-filter="true">
+            <li><a href="#">Acura</a> </li>
+            <li><a href="#">Audi</a> </li>
+            <li><a href="#">BMW</a> </li>
+            <li><a href="#">Cadillac</a> </li>
+            <li><a href="#">Ferrari</a> </li>
+        </ul>
+
+        <form>
+            <label for="slider-0">Input slider:</label>
+            <input type="range" name="slider" id="slider-0" value="25" min="0" max="100" />
+        </form>
+        <a href="#" data-role="button" data-icon="star">Star button</a>
+
+
+
+
         <div class="ui-grid-b" style="padding: 2%;" align="middle">
-            <div class="ui-block-a" style="height:100%">
-                <img style="height:30px;" src="img/f.png" is="image" align="middle">
-            </div>
 
+            <div class="ui-block-a" style="height:100%">
+                <a href="#">  <img style="width:95%; height:95%" src="img/1.jpg" is="image" align="middle">
+                </a>
+            </div>
             <div class="ui-block-b" style="height:100%">
-                <img style="height:30px;" src="img/t.png" is="image" align="middle">
+                <a href="#"><img style="width:95%; height:95%" src="img/2.jpg" is="image" align="middle">
+                </a>
             </div>
             <div class="ui-block-c" style="height:100%">
-                <img style="height:30px;" src="img/i.png" is="image" align="middle">
+                <a href="#"><img style="width:95%; height:95%" src="img/3.jpg" is="image" align="middle"></a>
+                <p></p>
+            </div>
+
+
+            <div class="ui-block-a" style="height:100%">
+                <img style="max-width:95%; min-width:95%" src="img/10.jpg" is="image" align="middle">
+            </div>
+            <div class="ui-block-b" style="height:100%">
+                <img style="max-width:95%; min-width:95%" src="img/11.jpg" is="image" align="middle">
             </div>
         </div>
-        &copy; Wild 2016
+
+
+
+        <div style="width:100%;;">
+            <a href="#"><img style="width:100%; opacity: 1.0;" src="img/1.jpg" /></a>
+        </div>
+
+        <div>
+            <h2>Neiman Marcus Coat</h2>
+            <p>An amazing coat to go with some ordinary pair of jeans that'll make you rethink your life.</p>
+        </div>
+
+
+
+        <div data-role="collapsible" data-iconpos="right">
+            <h3>Add to Cart</h3>
+            <label>Quantity</label>
+            <input type="number" min="1" max="3"/>
+            <a href="" data-role="button" data-iconpos="right" data-icon="plus" >Add to Cart!</a>
+
+        </div>
+
+
+        <form>
+            <label for="text-name">Name:
+                <input type="text" name="name" id="text-name" value="Yazdaan"/>
+            </label>
+            <label for="text-name">Mobile:
+                <input type="text" name="mobile" id="text-mobile" value="+95 445 158 546"/>
+            </label>
+            <label for="text-name">Email:
+                <input type="text" name="email" id="text-email" value="me@myemail.com"/>
+            </label>
+            <div data-role="collapsible" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                <h3>Change password</h3>
+                <label>Old password</label>
+                <input type="password" placeholder="******" />
+                <label>New password</label>
+                <input type="password" />
+                <label>Confirm password</label>
+                <input type="password" />
+                <input type="button" value="Confirm" />
+
+            </div>
+            <!--<input type="button" name="slider" id="slider-0" value="25" min="0" max="100" />-->
+        </form>
+
+
+
+        <div data-role="footer" align="right">
+            <div class="ui-grid-b" style="padding: 2%;" align="middle">
+                <div class="ui-block-a" style="height:100%">
+                    <img style="height:30px;" src="img/f.png" is="image" align="middle">
+                </div>
+
+                <div class="ui-block-b" style="height:100%">
+                    <img style="height:30px;" src="img/t.png" is="image" align="middle">
+                </div>
+                <div class="ui-block-c" style="height:100%">
+                    <img style="height:30px;" src="img/i.png" is="image" align="middle">
+                </div>
+            </div>
+            &copy; Wild 2016
+        </div>
     </div>
-</div>
 </body>
 </html>
