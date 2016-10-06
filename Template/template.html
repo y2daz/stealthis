@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="themes/halocity.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <!-- Include jQuery Mobile stylesheets -->
+
+    <!-- Include the jQuery library -->
+    <script src="jquery.mobile-1.4.5/jquery-1.11.3.js"> </script>
+    <!-- Include the jQuery Mobile library -->
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"> </script>
+    <script>
+        $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
+            if (applicationCache &&
+                    applicationCache.status != applicationCache.UNCACHED &&
+                    applicationCache.status != applicationCache.OBSOLETE
+                    ) {
+                options.isLocal = true;
+            }
+        });
+
+    </script>
+    <title>Test</title>
+</head>
+<body>
+<div data-role="page" data-theme="b">
+    <div data-role="main" class="ui-content" data-theme="a">
+        <div align="right">
+            <fieldset data-role="controlgroup" data-type="horizontal" data-mini="false" >
+                <a href="./index.html" data-role="button" data-icon="home" data-iconpos="notext" >Home</a>
+                <a href="./profile.html" data-role="button" data-icon="user" data-iconpos="notext">Profile</a>
+                <a href="./cart.html" data-role="button" data-icon="shop" data-iconpos="notext" >Cart</a>
+            </fieldset>
+        </div>
+
+        <h1 align="center">Template</h1>
+
+    </div>
+
+    <div data-role="footer" align="right">
+        &copy; Wild 2016
+    </div>
+</div>
+</body>
+</html>

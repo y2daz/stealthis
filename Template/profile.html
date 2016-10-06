@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="themes/halocity.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <!-- Include t  he jQuery library -->
+    <script src="jquery.mobile-1.4.5/jquery-1.11.3.js"> </script>
+    <!-- Include the jQuery Mobile library -->
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"> </script>
+    <script>
+        $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
+            if (applicationCache &&
+                    applicationCache.status != applicationCache.UNCACHED &&
+                    applicationCache.status != applicationCache.OBSOLETE
+                    ) {
+                options.isLocal = true;
+            }
+        });
+
+    </script>
+    <title>Test</title>
+</head>
+<body>
+<div data-role="page" data-theme="b">
+    <div data-role="main" class="ui-content" data-theme="a">
+        <div align="right">
+            <fieldset data-role="controlgroup" data-type="horizontal" data-mini="false" >
+                <a href="./index.html" data-role="button" data-icon="home" data-iconpos="notext" >Home</a>
+                <a data-role="button" data-icon="user" data-iconpos="notext" class="ui-btn-active">Profile</a>
+                <a href="./cart.html" data-role="button" data-icon="shop" data-iconpos="notext">Cart</a>
+            </fieldset>
+        </div>
+
+        <h1 align="center">Profile</h1>
+
+        <form>
+            <label for="text-name">Name:
+                <input type="text" name="name" id="text-name" value="Yazdaan"/>
+            </label>
+            <label for="text-name">Mobile:
+                <input type="text" name="mobile" id="text-mobile" value="+95 445 158 546"/>
+            </label>
+            <label for="text-name">Email:
+                <input type="text" name="email" id="text-email" value="me@myemail.com"/>
+            </label>
+            <div data-role="collapsible" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                <h3>Change password</h3>
+                <label>Old password</label>
+                <input type="password" />
+                <label>New password</label>
+                <input type="password" />
+                <label>Confirm password</label>
+                <input type="password" />
+                <input type="button" value="Confirm" />
+
+            </div>
+            <!--<input type="button" name="slider" id="slider-0" value="25" min="0" max="100" />-->
+        </form>
+    </div>
+
+    <div data-role="footer" align="right">
+        &copy; Wild 2016
+    </div>
+</div>
+</body>
+</html>

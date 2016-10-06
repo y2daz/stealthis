@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="themes/halocity.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <!-- Include the jQuery library -->
+    <script src="jquery.mobile-1.4.5/jquery-1.11.3.js"> </script>
+    <!-- Include the jQuery Mobile library -->
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"> </script>
+    <script>
+        $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
+            if (applicationCache &&
+                    applicationCache.status != applicationCache.UNCACHED &&
+                    applicationCache.status != applicationCache.OBSOLETE
+                    ) {
+                options.isLocal = true;
+            }
+        });
+
+    </script>
+</head>
+<body>
+<div data-role="page" data-theme="b">
+    <div data-role="header">
+        <!--<h1>Wild</h1>-->
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <div align="right">
+            <fieldset data-role="controlgroup" data-type="horizontal" data-mini="false" >
+                <a data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-active" >Home</a>
+                <a href="./profile.html" data-role="button" data-icon="user" data-iconpos="notext">Profile</a>
+                <a href="./cart.html" data-role="button" data-icon="shop" data-iconpos="notext">Cart</a>
+            </fieldset>
+        </div>
+
+        <div style="width:100%;;">
+            <a href="#"><img style="width:100%; opacity: 1.0;" src="img/main.jpg" /></a>
+        </div>
+
+        <div>
+            <h2>Wild</h2>
+            <p>The only place for your clothes</p>
+        </div>
+
+        <a href="gallery.html" data-role="button" data-iconpos="right" data-icon="carat-r" >Shop Now!</a>
+    </div>
+
+    <div data-role="footer" align="right">
+        <div class="ui-grid-b" style="padding: 2%;" align="middle">
+            <div class="ui-block-a" style="height:100%">
+                <img style="height:30px;" src="img/f.png" is="image" align="middle">
+            </div>
+
+            <div class="ui-block-b" style="height:100%">
+                <img style="height:30px;" src="img/t.png" is="image" align="middle">
+            </div>
+            <div class="ui-block-c" style="height:100%">
+                <img style="height:30px;" src="img/i.png" is="image" align="middle">
+            </div>
+        </div>
+        &copy; Wild 2016
+    </div>
+</div>
+</body>
+</html>
