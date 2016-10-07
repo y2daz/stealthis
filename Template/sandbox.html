@@ -76,7 +76,7 @@
                     </ul>
                 </div>
 
-                <div data-role="none" class="glide__bullets"></div>
+                <!--<div data-role="none" class="glide__bullets"></div>-->
 
             </div>
         </div>
@@ -89,6 +89,21 @@
                 type: 'carousel',
                 startAt: 1,
                 touchDistance: 2
+            });
+
+//            console.log("Test");
+//            window.resizeTo(window.width, window.height);
+//            console.log("Test");
+//            window.resizeBy(0.5, 0.5);
+            console.log("Yellow1");
+
+            $(window).load(function(){
+                changeScreenSize();
+                console.log("Yellow2");
+                function changeScreenSize() {
+                    console.log("Yellow3");
+                    window.resizeBy(-100, -50)
+                }
             });
 
         </script>
@@ -105,7 +120,7 @@
 
 
     <div data-role="footer" align="right">
-        &copy; Wild 2016
+        <h1>&copy; Wild 2016<h1>
     </div>
 </div>
 </body>
