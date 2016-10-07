@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="themes/halocity.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+        <!-- Include jQuery Mobile stylesheets -->
+
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/css/glide.core.css">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/css/glide.theme.css">
+
+    <!-- Include the jQuery library -->
+    <script src="jquery.mobile-1.4.5/jquery-1.11.3.js"> </script>
+    <!-- Include the jQuery Mobile library -->
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"> </script>
+    <script>
+        $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
+            if (applicationCache &&
+                    applicationCache.status != applicationCache.UNCACHED &&
+                    applicationCache.status != applicationCache.OBSOLETE
+                    ) {
+                options.isLocal = true;
+            }
+        });
+
+    </script>
+    <title>Test</title>
+</head>
+<body>
+<div data-role="page" data-theme="b">
+    <div data-role="main" class="ui-content" data-theme="a">
+        <div align="right">
+            <fieldset data-role="controlgroup" data-type="horizontal" data-mini="false" >
+                <a href="./index.html" data-role="button" data-icon="home" data-iconpos="notext" >Home</a>
+                <a href="#" data-role="button" data-icon="user" data-iconpos="notext">Profile</a>
+                <a href="#" data-role="button" data-icon="shop" data-iconpos="notext" >Cart</a>
+            </fieldset>
+        </div>
+
+        <h1 align="center">Template</h1>
+
+
+        <!-- SLIDER -->
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <div class="module module--horizontal" data-role="none">
+            <div id="Carousel" class="glide" data-role="none">
+
+                <div class="glide__arrows" data-role="none">
+                    <button class="glide__arrow prev" data-role="none" data-glide-dir="<">prev</button>
+                    <button class="glide__arrow next" data-role="none" data-glide-dir=">">next</button>
+                </div>
+
+                <div data-role="none" class="glide__wrapper" >
+                    <ul data-role="none" class="glide__track">
+                        <li data-role="none" class="glide__slide" data-glide-autoplay="1000">
+                            <div data-role="none" class="box" style="background-color: #77A7FB; width: 100%">
+                                <a data-role="none" href="#"><img style="width:100%; opacity: 1.0;" src="img/main.jpg" /></a>
+                            </div>
+                        </li>
+                        <li data-role="none" class="glide__slide" data-glide-autoplay="3000">
+                            <div data-role="none" class="box" style="background-color: #FBCB43; width: 100%">
+                                <a data-role="none" href="#"><img style="width:100%; opacity: 1.0;" src="img/main.jpg" /></a>
+                            </div>
+                        </li>
+                        <li data-role="none" class="glide__slide" data-glide-autoplay="5000">
+                            <div data-role="none" class="box" style="background-color: #34B67A; width: 100%">
+                                <a data-role="none" href="#"><img style="width:100%; opacity: 1.0;" src="img/main.jpg" /></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div data-role="none" class="glide__bullets"></div>
+
+            </div>
+        </div>
+
+        <script src="jquery.mobile-1.4.5/glide.js"></script>
+
+        <script>
+
+            var carousel = $('#Carousel').glide({
+                type: 'carousel',
+                startAt: 1,
+                touchDistance: 2
+            });
+
+        </script>
+
+        <br />
+        <br />
+        <br />
+        <br />
+
+
+
+    </div>
+
+
+
+    <div data-role="footer" align="right">
+        &copy; Wild 2016
+    </div>
+</div>
+</body>
+</html>

@@ -1,9 +1,11 @@
 CREATE A bunch of themes
 remove current crap ones maybe
 
+create a bunch of default pages
+
 make blank more generic
 
-image sider
+image slider
 
 
 Swap themes
