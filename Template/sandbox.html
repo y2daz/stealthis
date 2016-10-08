@@ -6,26 +6,26 @@
     <link rel="stylesheet" href="themes/halocity.min.css" />
     <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
     <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-        <!-- Include jQuery Mobile stylesheets -->
 
-    <link rel="stylesheet" href="jquery.mobile-1.4.5/css/glide.core.css">
-    <link rel="stylesheet" href="jquery.mobile-1.4.5/css/glide.theme.css">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/css/unslider.css" />
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/css/unslider-dots.css" />
+        <!-- Include jQuery Mobile stylesheets -->
 
     <!-- Include the jQuery library -->
     <script src="jquery.mobile-1.4.5/jquery-1.11.3.js"> </script>
     <!-- Include the jQuery Mobile library -->
     <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"> </script>
-    <script>
-        $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
-            if (applicationCache &&
-                    applicationCache.status != applicationCache.UNCACHED &&
-                    applicationCache.status != applicationCache.OBSOLETE
-                    ) {
-                options.isLocal = true;
-            }
-        });
+    <script src="jquery.mobile-1.4.5/unslider-min.js"> </script>
 
+    <script>
+        jQuery(document).ready(function($) {
+            $('.my-slider').unslider({
+                autoplay: true,
+                infinite: true
+            });
+        });
     </script>
+
     <title>Test</title>
 </head>
 <body>
@@ -48,65 +48,19 @@
         <br />
         <br />
 
-        <div class="module module--horizontal" data-role="none">
-            <div id="Carousel" class="glide" data-role="none">
-
-                <div class="glide__arrows" data-role="none">
-                    <button class="glide__arrow prev" data-role="none" data-glide-dir="<">prev</button>
-                    <button class="glide__arrow next" data-role="none" data-glide-dir=">">next</button>
-                </div>
-
-                <div data-role="none" class="glide__wrapper" >
-                    <ul data-role="none" class="glide__track">
-                        <li data-role="none" class="glide__slide" data-glide-autoplay="1000">
-                            <div data-role="none" class="box" style="background-color: #77A7FB; width: 100%">
-                                <a data-role="none" href="#"><img style="width:100%; opacity: 1.0;" src="img/main.jpg" /></a>
-                            </div>
-                        </li>
-                        <li data-role="none" class="glide__slide" data-glide-autoplay="3000">
-                            <div data-role="none" class="box" style="background-color: #FBCB43; width: 100%">
-                                <a data-role="none" href="#"><img style="width:100%; opacity: 1.0;" src="img/main.jpg" /></a>
-                            </div>
-                        </li>
-                        <li data-role="none" class="glide__slide" data-glide-autoplay="5000">
-                            <div data-role="none" class="box" style="background-color: #34B67A; width: 100%">
-                                <a data-role="none" href="#"><img style="width:100%; opacity: 1.0;" src="img/main.jpg" /></a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <!--<div data-role="none" class="glide__bullets"></div>-->
-
-            </div>
+        <div class="my-slider">
+            <ul>
+                <li>
+                        <a href="#"><img style="width:100%; opacity: 1.0;" src="img/main.jpg" /></a>
+                </li>
+                <li>
+                        <a href="#"><img style="width:100%; opacity: 1.0;" src="img/main.jpg" /></a>
+                </li>
+                <li>
+                        <a href="#"><img style="width:100%; opacity: 1.0;" src="img/main.jpg" /></a>
+                </li>
+            </ul>
         </div>
-
-        <script src="jquery.mobile-1.4.5/glide.js"></script>
-
-        <script>
-
-            var carousel = $('#Carousel').glide({
-                type: 'carousel',
-                startAt: 1,
-                touchDistance: 2
-            });
-
-//            console.log("Test");
-//            window.resizeTo(window.width, window.height);
-//            console.log("Test");
-//            window.resizeBy(0.5, 0.5);
-            console.log("Yellow1");
-
-            $(window).load(function(){
-                changeScreenSize();
-                console.log("Yellow2");
-                function changeScreenSize() {
-                    console.log("Yellow3");
-                    window.resizeBy(-100, -50)
-                }
-            });
-
-        </script>
 
         <br />
         <br />
