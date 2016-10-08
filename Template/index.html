@@ -5,15 +5,28 @@
 
     <!--CHANGE THIS LINE FOR THEME-->
     <link rel="stylesheet" href="themes/forest.min.css" />
-
-    <!-- Include the jQuery CSS -->
-    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile.icons-1.4.5.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
     <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/css/unslider.css" />
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/css/unslider-dots.css" />
+    <!-- Include jQuery Mobile stylesheets -->
 
     <!-- Include the jQuery library -->
     <script src="jquery.mobile-1.4.5/jquery-1.11.3.js"> </script>
     <!-- Include the jQuery Mobile library -->
     <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"> </script>
+    <script src="jquery.mobile-1.4.5/unslider-min.js"> </script>
+
+    <script>
+        jQuery(document).ready(function($) {
+            $('.my-slider').unslider({
+                autoplay: true,
+                infinite: true,
+                arrows: false
+            });
+        });
+    </script>
 
     <title>INSERT TITLE HERE</title>
 
@@ -54,7 +67,30 @@
         <a href="#" data-role="button" data-iconpos="right" data-icon="carat-r" >Click me!</a>
         <a href="#" data-role="button" data-icon="star">Star button</a>
 
-        <!-- PUT OTHER POSSIBLE ICONS IN OTHER POSITION -->
+        <!-- SLIDER -->
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <div class="my-slider">
+            <ul>
+                <li>
+                    <img style="width:100%; " src="img/main.jpg" />
+                </li>
+                <li>
+                    <img style="width:100%; " src="img/main.jpg" />
+                </li>
+                <li>
+                    <img style="width:100%; " src="img/main.jpg" />
+                </li>
+            </ul>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <br />
 
 
         <!--
