@@ -32,30 +32,44 @@
 
 </head>
 <body>
-<div data-role="page" data-theme="b">
+<div data-role="page" data-theme="a" id="mainPage">
+
+    <div data-role="panel" id="myPanel">
+        <h2>Menu</h2>
+        <div>
+            <ul>
+                <li><a href="#" data-role="button" data-icon="home" class="ui-btn-active">Home</a></li>
+                <li><a href="#" data-role="button" data-icon="grid" data-iconpos="left">Gallery</a></li>
+                <li><a href="#" data-role="button" data-icon="camera" data-iconpos="left">Pictures</a></li>
+                <li><a href="#" data-role="button" data-icon="heart" data-iconpos="left">Favourites</a></li>
+            </ul>
+        </div><!-- /navbar -->
+
+    </div>
+
 
     <!-- ANY STUFF TO PUT IN THE HEADER -->
     <div data-role="header">
-        <a align="right" data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-active" >Home</a>
+        <a href="#myPanel" data-role="button" data-iconpos="notext" data-icon="bars" class="ui-btn-active">Open Panel</a>
         <h1>Yazdaan</h1>
-        <a align="left" data-role="button" data-icon="info" data-iconpos="notext" class="ui-btn-active" >Home</a>
+        <a data-role="button" data-icon="info" data-iconpos="notext" class="ui-btn-active" >Home</a>
 
 
 
         <!-- NAVIGATION -->
-        <div data-role="navbar">
-            <ul>
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">Gallery</a>
-                </li>
-                <li>
-                    <a href="#">Menu</a>
-                </li>
-            </ul>
-        </div>
+        <!--<div data-role="navbar">-->
+            <!--<ul>-->
+                <!--<li>-->
+                    <!--<a href="#">Home</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="#">Gallery</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="#">Menu</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
     </div>
 
     <!-- ALL THE MAIN STUFF GOES HERE -->
