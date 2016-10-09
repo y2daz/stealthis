@@ -28,13 +28,17 @@
 <body >
 <div data-role="page" data-theme="b">
     <div data-role="header" align="right">
+        <a align="right" data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-active" >Home</a>
         <h1>Login</h1>
+        <a align="left" data-role="button" data-icon="info" data-iconpos="notext" class="ui-btn-active" >Info</a>
+
     </div>
-    <div data-role="main" class="ui-content" data-theme="a" style="background-image: url('img/main.jpg'); background-repeat: repeat">
+    <div data-role="main" class="ui-content" data-theme="a"
+         style="background-image: url('img/main.jpg'); background-repeat: repeat">
 
 
 
-        <h1 align="center" style="color : #ffffff">Log in</h1>
+        <h1 align="center" style="color : #ffffff">Shop Name</h1>
 
         <br />
         <br />
@@ -42,23 +46,35 @@
         <br />
         <br />
         <br />
-
+        <form action="home.html">
         <div data-role="fieldcontain">
             <label style="color: white " for="name">Username:</label>
             <input type="text" name="name" id="name" value=""  />
         </div>
         <div data-role="fieldcontain">
             <label style="color: white " for="name">Password:</label>
-            <input type="text" name="name" id="name" value=""  />
+            <input type="password" name="name2" id="name" value="" required />
+
+        </div>
+        <div data-role="fieldcontain">
+            <label style="color: white " for="name">&nbsp;</label>
+
+            <a href="#"   >Forgot your password?</a>
+
         </div>
 
         <br />
         <br />
-        <br />
-        <br />
-        <br />
-        <a href="#" data-role="button" data-iconpos="right" data-icon="carat-r" >Log in!</a>
 
+
+        <div data-role="fieldcontain">
+            <!--<label style="color: white " for="name">&nbsp;</label>-->
+
+            <!--<a href="#" class="ui-btn ui-btn-inline" data-iconpos="right" data-icon="carat-r" >Log in!</a>-->
+            <input class="" data-role="button" data-iconpos="right"
+                   data-icon="carat-r" value="Submit" type="submit" />
+        </div>
+        </form>
     </div>
 
     <div data-role="footer" align="right">

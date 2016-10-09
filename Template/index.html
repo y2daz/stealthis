@@ -37,20 +37,37 @@
     <!-- ANY STUFF TO PUT IN THE HEADER -->
     <div data-role="header">
         <a align="right" data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-active" >Home</a>
-        <h1>I AM TITLE</h1>
+        <h1>Yazdaan</h1>
         <a align="left" data-role="button" data-icon="info" data-iconpos="notext" class="ui-btn-active" >Home</a>
+
+
+
+        <!-- NAVIGATION -->
+        <div data-role="navbar">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Gallery</a>
+                </li>
+                <li>
+                    <a href="#">Menu</a>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <!-- ALL THE MAIN STUFF GOES HERE -->
     <div data-role="main" class="ui-content">
         <!-- NAVIGATION -->
-        <div align="right">
-            <fieldset data-role="controlgroup" data-type="horizontal" data-mini="false" >
-                <a data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-active" >Home</a>
-                <a href="#" data-role="button" data-icon="user" data-iconpos="notext">Profile</a>
-                <a href="#" data-role="button" data-icon="shop" data-iconpos="notext">Cart</a>
-            </fieldset>
-        </div>
+        <!--<div align="right">-->
+            <!--<fieldset data-role="controlgroup" data-type="horizontal" data-mini="false" >-->
+                <!--<a data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-active" >Home</a>-->
+                <!--<a href="#" data-role="button" data-icon="user" data-iconpos="notext">Profile</a>-->
+                <!--<a href="#" data-role="button" data-icon="shop" data-iconpos="notext">Cart</a>-->
+            <!--</fieldset>-->
+        <!--</div>-->
 
         <!-- BIG IMAGE WHOLE -->
         <div style="width:100%;;">
@@ -317,17 +334,27 @@
             FOOTER STUFF GOES HERE.
             HAS SOCIAL MEDIA BUTTONS
         -->
+
+        <style>
+            .YazdaanHover{
+                opacity : 0.5
+            }
+            .YazdaanHover:hover{
+                opacity : 1.0
+            }
+        </style>
+
         <div data-role="footer" align="right">
             <div class="ui-grid-b" style="padding: 2%;" align="middle">
                 <div class="ui-block-a" style="height:100%">
-                    <img style="height:30px;" src="img/f.png" is="image" align="middle">
+                    <img class="YazdaanHover" style="height:30px;" src="img/f.png" is="image" align="middle">
                 </div>
 
                 <div class="ui-block-b" style="height:100%">
-                    <img style="height:30px;" src="img/t.png" is="image" align="middle">
+                    <img class="YazdaanHover" style="height:30px;" src="img/t.png" is="image" align="middle">
                 </div>
                 <div class="ui-block-c" style="height:100%">
-                    <img style="height:30px;" src="img/i.png" is="image" align="middle">
+                    <img class="YazdaanHover" style="height:30px;" src="img/i.png" is="image" align="middle">
                 </div>
             </div>
             <h1>&copy; Wild 2016</h1>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="themes/halocity.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <!-- Include jQuery Mobile stylesheets -->
+
+    <!-- Include the jQuery library -->
+    <script src="jquery.mobile-1.4.5/jquery-1.11.3.js"> </script>
+    <!-- Include the jQuery Mobile library -->
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"> </script>
+    <script>
+        $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
+            if (applicationCache &&
+                    applicationCache.status != applicationCache.UNCACHED &&
+                    applicationCache.status != applicationCache.OBSOLETE
+                    ) {
+                options.isLocal = true;
+            }
+        });
+
+    </script>
+    <title>Test</title>
+</head>
+<body >
+<div data-role="page" data-theme="b">
+    <div data-role="header" align="right">
+        <a align="right" data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-active" >Home</a>
+
+        <h1>Gallery</h1>
+        <a align="left" data-role="button" data-icon="shop" data-iconpos="notext" class="ui-btn-active" >Info</a>
+
+    </div>
+    <div class="ui-grid-b" style="padding: 2%;" align="middle">
+        <div class="ui-block-a" style="height:100%">
+            <a href="#">  <img style="width:95%; height:95%" src="img/1.jpg" is="image" align="middle">
+            </a>
+            <a href="#">Look1</a>
+            <p>&nbsp;</p>
+        </div>
+
+        <div class="ui-block-b" style="height:100%">
+            <a href="#"><img style="width:95%; height:95%" src="img/2.jpg" is="image" align="middle">
+            </a>
+            <a href="#">Look2</a>
+            <p>&nbsp;</p>
+
+        </div>
+
+        <div class="ui-block-c" style="height:100%">
+            <a href="#"><img style="width:95%; height:95%" src="img/3.jpg" is="image" align="middle"></a>
+            <a href="#">Look3</a>
+            <p>&nbsp;</p>
+        </div>
+
+
+        <div class="ui-block-a" style="height:100%">
+            <img style="max-width:95%; min-width:95%" src="img/10.jpg" is="image" align="middle">
+            <a href="#">Look4</a>
+            <p>&nbsp;</p>
+        </div>
+
+        <div class="ui-block-b" style="height:100%">
+            <img style="max-width:95%; min-width:95%" src="img/11.jpg" is="image" align="middle">
+            <a href="#">Look5</a>
+            <p>&nbsp;</p>
+        </div>
+
+    </div>
+
+
+    <div data-role="footer" align="right">
+        <h1>&copy; Wild 2016</h1>
+    </div>
+</div>
+</body>
+</html>
